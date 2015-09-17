@@ -1,0 +1,29 @@
+body {
+
+}
+
+
+
+.neon-border {
+	border: 0;
+	height: 0;
+	box-shadow: 0 0 8px 5px rgb(255, 59, 254);
+}
+
+.neon-border:after {
+	content: "\00a0";
+}
+
+.wide-row {
+	max-width: 100%;
+	line-height: normal;
+}
+
+.wide-columns {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.trip-table {
+	width: 100%;
+}

@@ -1,0 +1,31 @@
+<iframe id="sc-widget" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1848538&show_artwork=true" class="sticky"></iframe>
+<div class="row bpm-header">
+  <div class="large-8 large-centered columns">
+    <img src="images/bpm-logo.png">
+    <h2 class="center">100 Most Recently Played Tracks</h2>
+  </div>
+</div>
+<div class="row wide-row">
+  <div class="large-12 columns wide-columns">
+    <hr class="neon-border">
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 large-centered columns">
+    <dl class="accordion" data-accordion>
+      <% @bpm_playlist.each_with_index do |track, index| %>
+      <dd class="accordion-navigation">
+        <a href="#panel<%= index %>">
+          <span class="title"><%= track["title"] %> </span> <span class="artist"><%= track["artist"] %></span>
+          <% if track["breaker?"] == true %>
+            <span class="breaker right"><%= "BPM Breaker" %></span>
+          <% end %>
+        </a>
+        <div id="panel<%= index %>" class="content">
+          Loading soundcload tracks...
+        </div>
+      </dd>
+      <% end %>
+    </dl>
+  </div>
+</div>
