@@ -57,20 +57,20 @@
 </div>
 <% @home_trips.each do |trip| %>
 	<div class="row">
-		<div class="small-3 columns text-center trip-box" style="background-color:<%=trip.route.color_code%>">
+		<div class="small-12 medium-3 large-3 columns text-center trip-box" style="background-color:<%=trip.route.color_code%>">
 			<p class="data trip-heading"><%= trip.route.name %></p>
 			<p class="data"><%= trip.route.abbr_name %></p>
 			<p class="data">Route #<%= trip.route.route_number%> | # Stations: <%= trip.route.stations_count %></p>
 		</div>
-		<div class="small-3 columns text-center">
+		<div class="small-4 medium-3 large-3 columns text-center">
 			<p class="data trip-time"><%= trip.origin_time %></p>
 			<p class="data"><%= trip.origin %></p>
 		</div>
-		<div class="small-3 columns text-center">
+		<div class="small-4 medium-3 large-3 columns text-center">
 			<p class="data trip-time"><%= trip.destination_time %></p>
 			<p class="data"><%= trip.destination %></p>
 		</div>
-		<div class="small-3 columns text-center">
+		<div class="small-4 medium-3 large-3 columns text-center">
 			<p class="data"><%= ((Time.parse(trip.origin_time) - Time.now) / 60).to_i %> Min.</p>
 			<p class="data">$<%= trip.fare %></p>
 		</div>
