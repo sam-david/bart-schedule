@@ -2,16 +2,30 @@ body {
 
 }
 
+.top-bar {
+	background-color: #6C6C6C;
+}
 
+.topbar-title {
+	color: black;
+}
 
 .neon-border {
 	border: 0;
 	height: 0;
-	box-shadow: 0 0 8px 5px rgb(255, 59, 254);
+	box-shadow: 0 0 8px 5px rgb(0, 155, 218);
 }
 
 .neon-border:after {
 	content: "\00a0";
+}
+
+.flat-border {
+	border: none;
+    height: 3px;
+    /* Set the hr color */
+    color: rgb(0, 155, 218); /* old IE */
+    background-color: rgb(0, 155, 218); /* Modern Browsers */
 }
 
 .wide-row {
@@ -26,4 +40,66 @@ body {
 
 .trip-table {
 	width: 100%;
+}
+
+.data {
+	margin-bottom: 0;
+	line-height: normal;
+}
+
+.heading-box {
+	border-bottom: solid black 1px;
+}
+
+.bart-title {
+	margin-left: 3%;
+	margin-top: 1%;
+	font-size: 5em;
+}
+.trip-heading {
+	font-size: .7em;
+	text-align: center;
+}
+
+.trip-box {
+	border-left: solid black 1px;
+	border-right: solid black 1px;
+	border-bottom: solid black 1px;
+}
+
+.trip-time {
+	font-size: 1.4em;
+	line-height: normal;
+}
+
+.destination-heading {
+	text-align: center;
+	line-height: normal;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.hr-top {
+	margin-bottom: 0;
+}
+
+.hr-top-top {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.hr-bottom {
+	margin-top: 0;
+}
+
+.bart-image {
+	width: 21%;
+}
+
+
+@media only screen and (max-width: 40em) { 
+	.column-headings {
+		display: none;
+	}
+
 }

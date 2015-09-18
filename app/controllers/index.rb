@@ -1,5 +1,6 @@
 get '/' do
-	@trips = Bart.get_schedule("ftvl","powl",2)
+	@work_trips = Bart.get_schedule("ftvl","powl",2)
+	@home_trips = Bart.get_schedule("powl","ftvl",2)
 	erb :index
 end
 

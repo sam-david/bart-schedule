@@ -31,10 +31,7 @@ module Bart
 			time_difference = Time.parse(trip_array.last.origin_time) - starting_time
 			starting_time = starting_time + time_difference + 100
 		end
-		trip_array.each do |trip|
-			p trip.origin_time
-			p trip
-		end
+		return trip_array
 	end
 	def self.get_route(number)
 		bart_uri = URI.parse('http://api.bart.gov/api/route.aspx?')
@@ -50,6 +47,6 @@ module Bart
 		route_stations_count = doc.css('num_stns').children.text
 		route_color = doc.css('color').children.text
 
-		return Route.new({name: route_name, abbr_name: route_abbr_name, stations_count: route_stations_count, color_code: route_color})
+		return Route.new({name: route_name, abbr_name: route_abbr_name, stations_count: route_stations_count, color_code: route_color, route_number: number})
 	end
 end
