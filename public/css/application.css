@@ -101,5 +101,8 @@ body {
 	.column-headings {
 		display: none;
 	}
+	.trip-box {
+		border: solid black 1px;
+	}
 
 }
